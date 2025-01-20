@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize likes from local storage
     initializeLikes();
+
+    // Add event listeners for form submissions
+    document.getElementById('sign-up').addEventListener('submit', handleSignUp);
+    document.getElementById('login').addEventListener('submit', handleLogin);
 });
 
 function loadVideoFeed() {
@@ -91,3 +95,40 @@ function initializeLikes() {
         likeCountSpan.textContent = likeCount;
     });
 }
+
+function handleSignUp(event) {
+    event.preventDefault();
+    const username = document.getElementById('signup-username').value;
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+    }
+
+    const user = { username, email, password };
+    localStorage.setItem('user_' + username, JSON.stringify(user));
+    alert('Sign-up successful');
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    const storedUser = localStorage.getItem('user_' + username);
+    if (!storedUser) {
+        alert('User not found');
+        return;
+    }
+
+    const user = JSON.parse(storedUser);
+    if (user.password !== password) {
+        alert('Incorrect password');
+        return;
+    }
+
+    alert('Login successful');
+        }
