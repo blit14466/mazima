@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="profile">
+            <h2>User Profile</h2>
+            <div class="profile-info">
+                <img src="profile-pic.jpg" alt="Profile Picture" id="profile-pic">
+                <button id="edit-profile">Edit</button>
+                <div class="details">
+                    <p><strong>Username:</strong> <span id="username">User123</span></p>
+                    <p><strong>Email:</strong> <span id="email">user@example.com</span></p>
+                    <p><strong>Bio:</strong> <span id="bio">This is a sample bio.</span></p>
+                </div>
+            </div>
+        </section>
+        <section id="user-videos">
+            <h2>Uploaded Videos</h2>
+            <div class="video-grid" id="video-grid">
+                <!-- Videos will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
+    <script src="profile.js"></script>
+</body>
+</html>
