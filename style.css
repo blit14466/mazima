@@ -120,3 +120,59 @@ footer ul li a {
         font-size: 0.9rem;
     }
 }
+
+/* Center alignment for sign-up and login forms */
+#auth-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#auth-forms section {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#auth-forms h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#auth-forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+#auth-forms label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#auth-forms input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#auth-forms button {
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#auth-forms button:hover {
+    background-color: #0056b3;
+    }
